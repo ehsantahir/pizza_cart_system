@@ -1,0 +1,40 @@
+
+
+.cheese-size {
+  border: 5px solid white;
+  width: 400px;
+  height: 200px;
+  border-radius: 10px;
+
+  .cart-button {
+    width: 100px;
+    height: 40px;
+    border: 2px solid blue;
+    background: blue;
+    border-radius: 5px;
+  }
+
+  .price-value {
+    .value{
+      color: blue;
+
+    }
+  }
+
+}
+.fries-price {
+  width: 300px;
+  height: 200px;
+  border: 2px solid white;
+  border-radius: 10px;
+  .cart-button {
+    width: 100px;
+    height: 40px;
+    background: blue;
+    border-radius: 5px;
+  }
+  .value{
+    color: blue;
+
+  }
+}

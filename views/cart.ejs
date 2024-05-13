@@ -1,0 +1,48 @@
+<%- include ("partials/header"); %>
+
+<% function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function capitalizeEachWord(string) {
+    if (string.includes(' ')) {
+        const chunks = string.split(' ');
+        const firstChunk = capitalizeFirstLetter(chunks[0]);
+        const secondChunk = capitalizeFirstLetter(chunks[1]);
+        return `${firstChunk} ${secondChunk}`;
+    }
+
+    return capitalizeFirstLetter(string);
+}
+%>
+
+<div class="root w-screen h-screen  flex flex-col">
+
+    <div class="flex bg-zinc-900 justify-center items-center" style="flex: 0.5;">
+        <h1 class="text-5xl font-bold text-white">CART SYSTEM</h1>
+    </div>
+
+    <div class="weight-2 flex flex-col bg-zinc-800 justify-center items-center gap-5">
+
+        <% for (const cartEntry of cartEntries) { %>
+            <div class="card w-96 h-40 flex justify-center items-center">
+                <div class="h-32 w-32 bg-pink-400">
+                    <img src="/drawable/<%= cartEntry.type.includes('pizza') ? cartEntry.type.replace('-pizza', '') : cartEntry.type %>.jpg"  class="w-full h-full" />
+                </div>
+                <div class="weight-1 bg-zinc-500 h-32 p-2 text-white">
+                    <h1 class="text-2xl"><%=capitalizeEachWord(cartEntry.type.replace('-', ' ')) %></h1>
+                    <% if (cartEntry.type !== 'fries') { %>
+                    <p class="font-bold">Size: <span class="font-normal"><%=capitalizeFirstLetter(cartEntry.size)%></span></p>
+                    <% } %>
+                    <p class="font-bold">Price: <span class="font-normal">$<%=cartEntry.price%></span></p>
+                </div>
+            </div>
+        <% } %>
+
+    </div>
+
+
+</div>
+
+
+<%- include ("partials/footer"); %>

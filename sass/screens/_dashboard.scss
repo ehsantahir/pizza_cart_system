@@ -1,0 +1,47 @@
+.cheese-pizza-image-holder{
+  .cheese-pizza-image-container{
+
+  $imageurl: "/drawable/cheese.jpg";
+  background-image:url($imageurl);
+  background-size: cover;
+  background-position: center;
+  }
+
+  .items-container-heading{
+    background: rgba(39, 39, 42, 0.5);
+    bottom: 0;
+  }
+
+}
+
+.vegetable-pizza-image-holder{
+  .vegetable-pizza-image-container{
+
+    $imageurl: "/drawable/vegetable.jpg";
+    background-image:url($imageurl);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .items-container-heading{
+    background: rgba(39, 39, 42, 0.5);
+    bottom: 0;
+  }
+
+}
+
+.fries-image-holder{
+  .fries-image-container{
+
+    $imageurl: "/drawable/fries.jpg";
+    background-image:url($imageurl);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .items-container-heading{
+    background: rgba(39, 39, 42, 0.5);
+    bottom: 0;
+  }
+
+}

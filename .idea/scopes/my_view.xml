@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="my view" pattern="file[pizza-cart-system-ehsan]:*/&amp;&amp;!file[pizza-cart-system-ehsan]:.tmp/*&amp;&amp;!file[pizza-cart-system-ehsan]:.tmp//*" />
+</component>
